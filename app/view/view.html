@@ -1,0 +1,16 @@
+<table id="brainCandiesTable">
+    <tr ng-repeat="people in liCtrl.getFunction ">
+        <td>{{people.id}}</td>
+        <td>{{people.firstName}}</td>
+    </tr>
+</table>
+
+<form ng-submit="liCtrl.saves(getFunction)">
+    <div class="form-group">
+        <label for="firstName">Name</label>
+        <input type="text" minlength="2" class="form-control" id="firstName" value="submit" ng-model="liCtrl.getFunction.firstName" required>
+    </div>
+    <div>
+        <input type="submit" value="Save" id="saveButton" ng-disabled="liCtrl.getFunction.firstName == null">
+    </div>
+</form>
