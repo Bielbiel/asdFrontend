@@ -2,7 +2,7 @@
 {
     'use strict';
 
-    function fileDAO($resource)
+    function userDAO($resource)
     {
         var api = $resource('/api/user/:a', null, {
             query: {
@@ -22,5 +22,5 @@
 
     }
 
-    angular.module('app').factory('fileDAO', ['$resource', fileDAO]);
+    angular.module('app').factory('userDAO', ['$resource', userDAO]);
 })();
